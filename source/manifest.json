@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "Extension Test",
+  "version": "0.0.0",
+  "description": "Extension Test",
+  "homepage_url": "https://example.com",
+  "short_name": "Extension",
+  "permissions": ["activeTab", "storage", "http://*/*", "https://*/*"],
+  "optional_permissions": ["http://*/*", "https://*/*"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "__chrome|firefox__author": "",
+  "__opera__developer": {
+    "name": ""
+  },
+  "__firefox__applications": {
+    "gecko": {
+      "id": "extension-text@example.com"
+    }
+  },
+  "__chrome__minimum_chrome_version": "49",
+  "__opera__minimum_opera_version": "36",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Extension Test",
+    "__chrome|opera__chrome_style": false,
+    "__firefox__browser_style": false
+  },
+  "__chrome|opera__options_page": "options.html",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true,
+    "__chrome__chrome_style": false
+  },
+  "background": {
+    "scripts": ["js/background.bundle.js"],
+    "__chrome|opera__persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/contentScript.bundle.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

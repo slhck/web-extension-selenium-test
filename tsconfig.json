@@ -1,0 +1,39 @@
+{
+  // "extends": "@abhijithvijayan/tsconfig",
+  "compilerOptions": {
+    "jsx": "react", // JSX code generation
+    "target": "es5", // ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'.
+    "module": "esnext", // Module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'.
+    "noEmitOnError": true, // Do not emit outputs if any errors were reported.
+
+    /* Additional Checks */
+    "noUnusedLocals": true, // Report errors on unused locals.
+    "noUnusedParameters": true, // Report errors on unused parameters.
+    "noImplicitReturns": true, // Report error when not all code paths in function return a value.
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement.
+
+    /* Module Resolution Options */
+    "moduleResolution": "node", // Module resolution strategy
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export.
+    "resolveJsonModule": true, // Allow importing, extracting types from and generating .json files.
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports.
+
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "stripInternal": false, // Don't emit declarations for internal functions
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "strict": true, // Enable all strict type-checking options.
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type.
+    "declaration": false,
+    // "isolatedModules": true,
+
+    /* Additional Checks */
+    "useDefineForClassFields": true,
+    "skipLibCheck": true,
+    // "typeRoots": ["./@types", "./node_modules/@types"],
+
+    // Path settings
+    "baseUrl": "./"
+  },
+  "include": ["source", "webpack.config.js"]
+}

@@ -1,0 +1,6 @@
+@import "../../styles/base";
+
+// workaround for firefox
+body {
+  min-height: 500px;
+}
